@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 75%);;
+}
+
+#calculator{
+    font-family: Arial,sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 20px;
+    max-width: 500px;
+    overflow: hidden;         /*to hide anything that goes out of the calculator area such as long equations in the display box. */
+}
+
+#display{        /*area where the numbers and operators are displayed*/
+    width: 100%;
+    padding: 20px;
+    font-size: 3rem;
+    text-align: left;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);  /*means no.of col :- 4 and each repeated at an interval of 1 fractional space */
+    gap: 10px;   /*gap between each row */
+    padding: 25px;
+}
+
+button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;                         /* to make keys round */
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+/* to increase the brightness of the keys when hovered over them */ 
+button:hover{
+    background-color: hsl(0, 0%, 45%);
+}
+
+/*to further increase the brightness on being clicked , hence active propert is used */
+button:active{
+    background-color: hsl(0, 0%, 70%);
+}
+
+/*changing color of operator keys */
+.operator-btn{
+    background-color: hsl(39, 100%, 45%);
+}
+
+.operator-btn:hover{
+    background-color: hsl(39, 100%, 55%);
+}
+
+.operator-btn:active{
+    background-color: hsl(39, 100%, 70%);
+}
